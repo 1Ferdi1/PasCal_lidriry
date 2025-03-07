@@ -1,6 +1,6 @@
 ﻿program ComplexMathTool;
 uses 
-  crt, Compl, CMatr, RVect, CVect, Favorites, CStack;
+  crt, Compl, CMatr, RVect, CVect, Favorites, CStack, CQueue;
 
 var 
   Mode: integer;
@@ -17,11 +17,12 @@ begin
     writeln('3) Вещественные векторы');
     writeln('4) Комплексные векторы');
     writeln('5) Избранное');
-    writeln('6) Работа со стеками');  // Новый пункт меню
+    writeln('6) Работа со стеками');
+    Writeln('7) Работа с очередями');
     writeln('0) Выход');
     
-    GoToXY(1, 10); readln(Mode);  // Измененное положение курсора
-    GoToXY(1, 10); ClearLine;
+    GoToXY(1, 11); readln(Mode);
+    GoToXY(1, 11); ClearLine;
     
     case Mode of
       1: MenuCompl;
@@ -29,7 +30,8 @@ begin
       3: MenuRVect;
       4: MenuCVect;
       5: FavoritesMenu;
-      6: MenuCStack;  // Вызов меню стеков
+      6: MenuCStack;
+      7: MenuCQueue;
       0: ok := false;
       else
       begin

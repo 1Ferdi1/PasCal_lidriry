@@ -143,7 +143,6 @@ begin
   Ok := true;
   while Ok do
   begin
-    // Сброс стеков перед каждой операцией
     s.Top := Nil;
     s1.Top := Nil;
     s2.Top := Nil;
