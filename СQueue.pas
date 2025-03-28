@@ -1,4 +1,4 @@
-﻿Unit CQueue;
+﻿Unit СQueue;
 
 Interface
 

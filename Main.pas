@@ -1,13 +1,15 @@
 ﻿program ComplexMathTool;
-uses 
-  crt, Compl, CMatr, RVect, CVect, Favorites, CStack, CQueue;
+uses
+  crt, Compl, CMatr, RVect, CVect, Favorites,
+  CStack, СQueue, Lists, StudentFiles;
 
-var 
+var
   Mode: integer;
   ok: boolean;
   
 begin
   ok := true;
+  InitializeMenus;
   while ok do
   begin
     ClrScr;
@@ -18,11 +20,13 @@ begin
     writeln('4) Комплексные векторы');
     writeln('5) Избранное');
     writeln('6) Работа со стеками');
-    Writeln('7) Работа с очередями');
+    writeln('7) Работа с очередями');
+    writeln('8) Списки');
+    writeln('9) Файлы студентов');
     writeln('0) Выход');
     
-    GoToXY(1, 11); readln(Mode);
-    GoToXY(1, 11); ClearLine;
+    GoToXY(1, 15); readln(Mode);
+    GoToXY(1, 15); ClearLine;
     
     case Mode of
       1: MenuCompl;
@@ -32,6 +36,8 @@ begin
       5: FavoritesMenu;
       6: MenuCStack;
       7: MenuCQueue;
+      8: ShowMenu;
+      9: StudentMenu;
       0: ok := false;
       else
       begin
