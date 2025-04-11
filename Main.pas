@@ -22,7 +22,7 @@ begin
     writeln('6) Работа со стеками');
     writeln('7) Работа с очередями');
     writeln('8) Списки');
-    writeln('9) Файлы студентов');
+    writeln('9) Файлы записей');
     writeln('0) Выход');
     
     GoToXY(1, 15); readln(Mode);
