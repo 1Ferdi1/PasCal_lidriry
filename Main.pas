@@ -1,7 +1,8 @@
 ﻿program ComplexMathTool;
 uses
   crt, Compl, CMatr, RVect, CVect, Favorites,
-  CStack, СQueue, Lists, StudentFiles;
+  CStack, СQueue, Lists, StudentFiles, Tree,
+  BinTree;
 
 var
   Mode: integer;
@@ -23,6 +24,8 @@ begin
     writeln('7) Работа с очередями');
     writeln('8) Списки');
     writeln('9) Файлы записей');
+    writeln('10) Деревья');
+    writeln('11) Бинарные деревья');
     writeln('0) Выход');
     
     GoToXY(1, 15); readln(Mode);
@@ -38,6 +41,8 @@ begin
       7: MenuCQueue;
       8: ShowMenu;
       9: StudentMenu;
+      10: MenuTree;
+      11: MenuBinTree;
       0: ok := false;
       else
       begin
